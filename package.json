@@ -1,0 +1,17 @@
+{
+  "name": "coverage-brda-bug",
+  "version": "1.0.0",
+  "description": "Reproduce: ignore comment excludes DA but BRDA remains",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test:native && npm run test:c8",
+    "test:native": "node --experimental-test-coverage --test-reporter=lcov --test-reporter-destination=coverage/lcov-native.info --test test/example.test.js",
+    "test:c8": "c8 --reporter=lcov -o coverage node --test test/example-c8.test.js"
+  },
+  "devDependencies": {
+    "c8": "^10.1.3"
+  }
+}
